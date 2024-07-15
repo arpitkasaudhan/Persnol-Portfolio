@@ -2,7 +2,8 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import resume from "../assets/resume.pdf"
+import resume from "../assets/resume.pdf";
+
 const SocialLinks = () => {
   const links = [
     {
@@ -12,7 +13,7 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: "https://linkedin.com/in/Arpit Kasaudhankarda2002",
+      href: "https://www.linkedin.com/in/arpitkasaudhan/",
       style: "rounded-tr-md",
     },
     {
@@ -22,7 +23,7 @@ const SocialLinks = () => {
           GitHub <FaGithub size={30} />
         </>
       ),
-      href: "https://github.com/Arpit Kasaudhankarda",
+      href: "https://github.com/arpitkasaudhan",
     },
     {
       id: 3,
@@ -31,7 +32,7 @@ const SocialLinks = () => {
           Email <HiOutlineMail size={30} />
         </>
       ),
-      href: "mailto:Arpit Kasaudhankarda2002@gmail.com",
+      href: "mailto:kasaudhanarpit37@gmail.com",
     },
     {
       id: 4,
@@ -50,13 +51,13 @@ const SocialLinks = () => {
           Twitter <FaTwitter size={30} />
         </>
       ),
-      href: "https://twitter.com/Arpit Kasaudhankarda2002",
+      href: "https://twitter.com/ArpitKasaudhan",
       style: "rounded-br-md",
     },
   ];
 
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className="fixed top-[35%] left-0 flex flex-col">
       <ul>
         {links.map(({ id, child, href, style, download }) => (
           <li
