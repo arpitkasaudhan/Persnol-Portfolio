@@ -3,7 +3,6 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import resume from "../assets/resume.pdf";
 
 const SocialLinks = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -44,8 +43,7 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: resume,
-      download: true,
+      href: "https://drive.google.com/file/d/1QPDF7Fj9hIZAl36wDPV97AywY7DpO_7g/view?usp=drive_link",
     },
     {
       id: 5,

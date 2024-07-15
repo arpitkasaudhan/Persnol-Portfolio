@@ -1,11 +1,10 @@
 import React from "react";
-
+import cpp from "../assets/cpp.png";
+import appwe from "../assets/appwe.jpg"
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
-import nextjs from "../assets/nextjs.png";
-import graphql from "../assets/graphql.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
 import node from "../assets/node.png";
@@ -46,14 +45,14 @@ const Experience = () => {
     },
     {
       id: 6,
-      src: nextjs,
-      title: "Next JS",
+      src: cpp,
+      title: "C++",
       style: "shadow-white",
     },
     {
       id: 7,
-      src: graphql,
-      title: "GraphQL",
+      src: appwe,
+      title: "appwrite",
       style: "shadow-pink-400",
     },
     {
@@ -96,7 +95,7 @@ const Experience = () => {
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
-            Experience
+            Skills
           </p>
           <p className="py-6">These are the technologies I've worked with and used them in my projects.</p>
         </div>

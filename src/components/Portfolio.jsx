@@ -1,48 +1,60 @@
 import React from "react";
-import api from "../assets/portfolio/api.jpg";
-import apod from "../assets/portfolio/apod.jpg";
-import iptracker from "../assets/portfolio/iptracker.jpg";
-import nftportal from "../assets/portfolio/nftportal.jpg";
-import webpostman from "../assets/portfolio/webpostman.jpg";
-import waveportal from "../assets/portfolio/waveportal.jpg";
+import ecom from "../assets/portfolio/ecom.png";
+import pma from "../assets/portfolio/pma.png";
+import blog from "../assets/portfolio/blog.png";
+import chat from "../assets/portfolio/chat.png";
+import portfo from "../assets/portfolio/portfo.png";
+import phising from "../assets/portfolio/phising.png";
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: api,
-      link: 'https://crypto-info-api.cyclic.app/',
-      repo: 'https://github.com/Arpit Kasaudhankarda/crypto-info-api'
+      title: "Project Management App",
+      src: pma,
+      link: 'https://project-managment-app-ten.vercel.app/',
+      repo: 'https://github.com/arpitkasaudhan/Project_Managment_APP',
+      techStack: "React, Node.js, Express, MongoDB, GCP, RTK,Nodemailer"
     },
     {
       id: 2,
-      src: webpostman,
-      link: 'https://webpostman.netlify.app/',
-      repo: 'https://github.com/Arpit Kasaudhankarda/Web-Postman'
+      title: "E-commerce Site",
+      src: ecom,
+      link: 'https://fgecom.vercel.app/',
+      repo: 'https://github.com/arpitkasaudhan/fgecom',
+      techStack: "React, Node.js, Express, MongoDB, Tailwind CSS, Stripe, RTK, nodemailer"
     },
     {
       id: 3,
-      src: apod,
-      link: 'https://apodbyArpit Kasaudhan.netlify.app/',
-      repo: 'https://github.com/Arpit Kasaudhankarda/NASA-APOD'
+      title: "Blog App",
+      src: blog,
+      link: 'https://blogapp-taupe.vercel.app/',
+      repo: 'https://github.com/arpitkasaudhan/BlogApp-',
+      techStack: "React, Appwrite, Tinymce,RTK, Tailwind CSS, RTK, React-Hook-form"
     },
     {
       id: 4,
-      src: waveportal,
-      link: 'https://waveatArpit Kasaudhan.netlify.app/',
-      repo: 'https://github.com/Arpit Kasaudhankarda/Wave-Portal'
+      title: "Chat Application",
+      src: chat,
+      link: 'https://main--chat-application-net.netlify.app/',
+      repo: 'https://github.com/arpitkasaudhan/CHAT-APP-USING-MERN-',
+      techStack: "React,Node,Express,MongoDB, Socket.io, Peer.js."
     },
     {
       id: 5,
-      src: nftportal,
-      link: 'https://nftportalbyArpit Kasaudhan.netlify.app/',
-      repo: 'https://github.com/Arpit Kasaudhankarda/NFT-Portal'
+      title: "Phishing Detection",
+      src: phising,
+      link: 'https://catch-the-phish-qgfr.onrender.com/',
+      repo: 'https://github.com/avinashsinghgit/v3_phising_detection',
+      techStack: "python, HTML, CSS"
     },
     {
       id: 6,
-      src: iptracker,
-      link: 'https://trackmyip.netlify.app/',
-      repo: 'https://github.com/Arpit Kasaudhankarda/IP-Address-Tracker'
+      title: "Personal Portfolio",
+      src: portfo,
+      link: 'https://persnol-portfolio.vercel.app/',
+      repo: 'https://github.com/arpitkasaudhan/Persnol-Portfolio',
+      techStack: "React, Tailwind CSS, Getform"
     },
   ];
 
@@ -60,18 +72,26 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, link, repo }) => (
+          {portfolios.map(({ id, title, src, link, repo, techStack }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+              <h3 className="text-xl font-semibold text-center py-2">{title}</h3>
+              <p className="text-center text-gray-400 text-sm px-2">{techStack}</p>
               <img
                 src={src}
                 alt="projects"
-                className="rounded-md duration-200 hover:scale-105"
+                className="rounded-md duration-200 hover:scale-105 object-cover w-full h-48"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" onClick={ () => window.open(link, '_blank')}>
+                <button
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  onClick={() => window.open(link, "_blank")}
+                >
                   Demo
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" onClick={ () => window.open(repo, '_blank')}>
+                <button
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  onClick={() => window.open(repo, "_blank")}
+                >
                   GitHub
                 </button>
               </div>
