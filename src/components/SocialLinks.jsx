@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import resume from "../assets/resume.pdf";
 
 const SocialLinks = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
   const links = [
     {
       id: 1,
@@ -57,29 +60,37 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="fixed top-[35%] left-0 flex flex-col">
-      <ul>
-        {links.map(({ id, child, href, style, download }) => (
-          <li
-            key={id}
-            className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
-              " " +
-              style
-            }
-          >
-            <a
-              href={href}
-              className="flex justify-between items-center w-full text-white"
-              download={download}
-              target="_blank"
-              rel="noreferrer"
+    <div className="fixed top-[35%] left-0 flex flex-col items-start">
+      <button
+        className="bg-gray-700 text-white p-1 rounded-full m-2 hover:bg-gray-600"
+        onClick={() => setIsVisible(!isVisible)}
+      >
+        {isVisible ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+      </button>
+      {isVisible && (
+        <ul>
+          {links.map(({ id, child, href, style, download }) => (
+            <li
+              key={id}
+              className={
+                "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
+                " " +
+                style
+              }
             >
-              {child}
-            </a>
-          </li>
-        ))}
-      </ul>
+              <a
+                href={href}
+                className="flex justify-between items-center w-full text-white"
+                download={download}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {child}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
