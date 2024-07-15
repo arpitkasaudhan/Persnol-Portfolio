@@ -11,7 +11,7 @@ import node from "../assets/node.png";
 import express from "../assets/express.png"
 import mongodb from "../assets/mongodb.png"
 import redux from "../assets/redux.png"
-const Experience = () => {
+const Skills = () => {
   const techs = [
     {
       id: 1,
@@ -89,8 +89,8 @@ const Experience = () => {
 
   return (
     <div
-      name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen experience"
+      name="Skills"
+      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen Skills"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
@@ -116,4 +116,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skills;
